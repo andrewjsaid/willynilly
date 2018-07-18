@@ -15,6 +15,6 @@ namespace WillyNilly
             _convert = convert;
         }
 
-        public TOut Sample() => _convert(_input.Sample());
+        public TOut Measure() => _convert(_input.Measure());
     }
 }

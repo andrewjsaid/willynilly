@@ -13,7 +13,7 @@ namespace WillyNilly
             _maxDate = maxDate;
         }
 
-        public DateTime Sample()
+        public DateTime Measure()
         {
             var perc = RandomPool.NextDouble();
             var diff = _maxDate.Ticks - _minDate.Ticks;

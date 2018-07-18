@@ -11,7 +11,7 @@
             _b = b;
         }
 
-        public (T1, T2) Sample() => (_a.Sample(), _b.Sample());
+        public (T1, T2) Measure() => (_a.Measure(), _b.Measure());
     }
 
     public class CoVariables<T1, T2, T3> : IRandomVariable<(T1, T2, T3)>
@@ -27,6 +27,6 @@
             _c = c;
         }
 
-        public (T1, T2, T3) Sample() => (_a.Sample(), _b.Sample(), _c.Sample());
+        public (T1, T2, T3) Measure() => (_a.Measure(), _b.Measure(), _c.Measure());
     }
 }

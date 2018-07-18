@@ -13,7 +13,7 @@ namespace WillyNilly
             _sigma = sigma;
         }
 
-        public double Sample()
+        public double Measure()
         {
             double u;
             double s;

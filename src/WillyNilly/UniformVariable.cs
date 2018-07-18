@@ -11,7 +11,7 @@ namespace WillyNilly
             _max = max;
         }
 
-        public int Sample() => RandomPool.NextInt(_min, _max);
+        public int Measure() => RandomPool.NextInt(_min, _max);
 
     }
 }

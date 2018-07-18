@@ -11,6 +11,6 @@ namespace WillyNilly
             _members = members ?? throw new ArgumentNullException(nameof(members));
         }
 
-        public string Sample() => _members[RandomPool.NextInt(0, _members.Length)];
+        public string Measure() => _members[RandomPool.NextInt(0, _members.Length)];
     }
 }

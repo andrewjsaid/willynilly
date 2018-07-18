@@ -9,10 +9,10 @@
             _inputs = inputs;
         }
 
-        public T Sample()
+        public T Measure()
         {
             var source = _inputs[RandomPool.NextInt(0, _inputs.Length)];
-            return source.Sample();
+            return source.Measure();
         }
 
     }

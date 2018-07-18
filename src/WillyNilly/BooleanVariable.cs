@@ -11,6 +11,6 @@
             _prob = prob;
         }
 
-        public bool Sample() => RandomPool.NextDouble() < _prob;
+        public bool Measure() => RandomPool.NextDouble() < _prob;
     }
 }

@@ -11,7 +11,7 @@ namespace WillyNilly
             _members = members ?? throw new ArgumentNullException(nameof(members));
         }
 
-        public string[] Sample()
+        public string[] Measure()
         {
             var record = _members[RandomPool.NextInt(0, _members.Length)];
             var result = record.Split(new[] { ',' }, StringSplitOptions.RemoveEmptyEntries);

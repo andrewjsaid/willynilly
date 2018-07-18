@@ -17,7 +17,7 @@ namespace WillyNilly
             _values = type.GetEnumValues();
         }
 
-        public T Sample()
+        public T Measure()
         {
             return (T) _values.GetValue(RandomPool.NextInt(0, _values.Length));
         }

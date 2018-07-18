@@ -9,6 +9,6 @@
             _value = value;
         }
 
-        public T Sample() => _value;
+        public T Measure() => _value;
     }
 }

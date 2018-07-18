@@ -2,6 +2,6 @@
 {
     public interface IRandomVariable<out T>
     {
-        T Sample();
+        T Measure();
     }
 }
