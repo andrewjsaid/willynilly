@@ -1,5 +1,8 @@
 ﻿namespace WillyNilly
 {
+    /// <summary>
+    /// Groups variables to be measured together
+    /// </summary>
     public class CoVariables<T1, T2> : IRandomVariable<(T1, T2)>
     {
         private readonly IRandomVariable<T1> _a;
@@ -14,6 +17,9 @@
         public (T1, T2) Measure() => (_a.Measure(), _b.Measure());
     }
 
+    /// <summary>
+    /// Groups variables to be measured together
+    /// </summary>
     public class CoVariables<T1, T2, T3> : IRandomVariable<(T1, T2, T3)>
     {
         private readonly IRandomVariable<T1> _a;

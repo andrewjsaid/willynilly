@@ -2,6 +2,9 @@
 
 namespace WillyNilly
 {
+    /// <summary>
+    /// Applies a mapping on the output of one random variable to produce another
+    /// </summary>
     public class VariableConverter<TIn, TOut> : IRandomVariable<TOut>
     {
         private readonly IRandomVariable<TIn> _input;

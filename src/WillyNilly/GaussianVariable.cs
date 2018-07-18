@@ -2,6 +2,9 @@ using System;
 
 namespace WillyNilly
 {
+    /// <summary>
+    /// Returns doubles following a gaussian distribution
+    /// </summary>
     public class GaussianVariable : IRandomVariable<double>
     {
         private readonly double _mean;

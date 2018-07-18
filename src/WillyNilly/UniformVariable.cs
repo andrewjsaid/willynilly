@@ -1,5 +1,8 @@
 namespace WillyNilly
 {
+    /// <summary>
+    /// Returns integers in uniform distribution
+    /// </summary>
     public class UniformVariable : IRandomVariable<int>
     {
         private readonly int _min;

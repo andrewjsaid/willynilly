@@ -2,6 +2,9 @@ using System;
 
 namespace WillyNilly
 {
+    /// <summary>
+    /// Returns from the input string array in uniform distribution.
+    /// </summary>
     public class StringSetVariable : IRandomVariable<string>
     {
         private readonly string[] _members;

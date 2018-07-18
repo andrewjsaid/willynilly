@@ -2,6 +2,9 @@
 
 namespace WillyNilly
 {
+    /// <summary>
+    /// Returns from the input comma-separated values in uniform distribution
+    /// </summary>
     public class RecordSetVariable : IRandomVariable<string[]>
     {
         private readonly string[] _members;

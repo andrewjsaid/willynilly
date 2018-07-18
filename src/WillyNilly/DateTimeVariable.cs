@@ -2,6 +2,9 @@
 
 namespace WillyNilly
 {
+    /// <summary>
+    /// Returns dates within the specified range, in uniform distribution
+    /// </summary>
     public class DateTimeVariable : IRandomVariable<DateTime>
     {
         private readonly DateTime _minDate;

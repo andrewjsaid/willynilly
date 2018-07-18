@@ -2,6 +2,9 @@
 
 namespace WillyNilly
 {
+    /// <summary>
+    /// Returns the declared values of an enum with uniform probability
+    /// </summary>
     public class EnumVariable<T> : IRandomVariable<T>
     {
         private readonly Array _values;

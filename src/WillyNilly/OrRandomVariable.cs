@@ -1,5 +1,9 @@
 ﻿namespace WillyNilly
 {
+    /// <summary>
+    /// Returns a value from any one of the input variables,
+    /// choosing from them with uniform distribution.
+    /// </summary>
     public class OrRandomVariable<T> : IRandomVariable<T>
     {
         private readonly IRandomVariable<T>[] _inputs;
