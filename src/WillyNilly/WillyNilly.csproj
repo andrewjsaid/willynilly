@@ -1,11 +1,11 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Authors>Andrew J Said</Authors>
     <Description>Makes it easy to define stochastic variables which can be measured.</Description>
-    <Version>0.5.0</Version>
+    <Version>0.6.0</Version>
     <PackageProjectUrl>https://github.com/andrewjsaid/willynilly</PackageProjectUrl>
     <RepositoryUrl></RepositoryUrl>
     <PackageTags>stochastic random variable</PackageTags>
