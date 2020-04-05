@@ -1,14 +1,14 @@
-﻿namespace WillyNilly
+﻿namespace WillyNilly.Variables
 {
     /// <summary>
-    /// Groups variables to be measured together
+    /// Groups variables to be measured together.
     /// </summary>
-    public class CoVariables<T1, T2> : IRandomVariable<(T1, T2)>
+    internal sealed class GroupVariables<T1, T2> : IRandomVariable<(T1, T2)>
     {
         private readonly IRandomVariable<T1> _a;
         private readonly IRandomVariable<T2> _b;
 
-        public CoVariables(IRandomVariable<T1> a, IRandomVariable<T2> b)
+        public GroupVariables(IRandomVariable<T1> a, IRandomVariable<T2> b)
         {
             _a = a;
             _b = b;
@@ -18,15 +18,15 @@
     }
 
     /// <summary>
-    /// Groups variables to be measured together
+    /// Groups variables to be measured together.
     /// </summary>
-    public class CoVariables<T1, T2, T3> : IRandomVariable<(T1, T2, T3)>
+    internal sealed class GroupVariables<T1, T2, T3> : IRandomVariable<(T1, T2, T3)>
     {
         private readonly IRandomVariable<T1> _a;
         private readonly IRandomVariable<T2> _b;
         private readonly IRandomVariable<T3> _c;
 
-        public CoVariables(IRandomVariable<T1> a, IRandomVariable<T2> b, IRandomVariable<T3> c)
+        public GroupVariables(IRandomVariable<T1> a, IRandomVariable<T2> b, IRandomVariable<T3> c)
         {
             _a = a;
             _b = b;

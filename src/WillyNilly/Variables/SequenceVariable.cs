@@ -1,19 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace WillyNilly
+namespace WillyNilly.Variables
 {
     /// <summary>
-    /// Returns elements sequentially from an infinite sequence
+    /// Returns elements sequentially from an infinite sequence.
     /// </summary>
-    public class SequenceVariable<T> : IRandomVariable<T>
+    internal sealed class SequenceVariable<T> : IRandomVariable<T>
     {
         // do not make readonly in case of struct enumerator
-        // ReSharper disable once FieldCanBeMadeReadOnly.Local
         private IEnumerator<T> _enumerator;
 
-        public SequenceVariable(
-            IEnumerable<T> sequence)
+        public SequenceVariable(IEnumerable<T> sequence)
         {
             if(sequence == null) throw new ArgumentNullException(nameof(sequence));
             _enumerator = sequence.GetEnumerator();

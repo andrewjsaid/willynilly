@@ -1,14 +1,17 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <Nullable>enable</Nullable>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Authors>Andrew J Said</Authors>
     <Description>Makes it easy to define stochastic variables which can be measured.</Description>
     <Version>0.6.0</Version>
     <PackageProjectUrl>https://github.com/andrewjsaid/willynilly</PackageProjectUrl>
     <RepositoryUrl></RepositoryUrl>
-    <PackageTags>stochastic random variable</PackageTags>
+    <PackageTags>stochastic random variable fake</PackageTags>
   </PropertyGroup>
 
 </Project>

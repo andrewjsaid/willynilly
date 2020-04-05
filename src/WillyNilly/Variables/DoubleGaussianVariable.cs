@@ -1,17 +1,19 @@
 using System;
 
-namespace WillyNilly
+namespace WillyNilly.Variables
 {
     /// <summary>
-    /// Returns doubles following a gaussian distribution
+    /// Returns doubles following a gaussian distribution.
     /// </summary>
-    public class GaussianVariable : IRandomVariable<double>
+    internal sealed class DoubleGaussianVariable : IRandomVariable<double>
     {
+        private readonly IRandomSource _source;
         private readonly double _mean;
         private readonly double _sigma;
 
-        public GaussianVariable(double mean, double sigma)
+        public DoubleGaussianVariable(IRandomSource source, double mean, double sigma)
         {
+            _source = source;
             _mean = mean;
             _sigma = sigma;
         }
@@ -23,8 +25,8 @@ namespace WillyNilly
 
             do
             {
-                u = 2.0 * RandomPool.NextDouble() - 1.0;
-                var v = 2.0 * RandomPool.NextDouble() - 1.0;
+                u = 2.0 * _source.NextDouble() - 1.0;
+                var v = 2.0 * _source.NextDouble() - 1.0;
                 s = u * u + v * v;
             }
             while (s >= 1.0);

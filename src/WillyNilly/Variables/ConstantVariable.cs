@@ -1,9 +1,9 @@
-﻿namespace WillyNilly
+﻿namespace WillyNilly.Variables
 {
     /// <summary>
     /// Returns a constant value.
     /// </summary>
-    public class ConstantVariable<T> : IRandomVariable<T>
+    internal sealed class ConstantVariable<T> : IRandomVariable<T>
     {
         private readonly T _value;
 

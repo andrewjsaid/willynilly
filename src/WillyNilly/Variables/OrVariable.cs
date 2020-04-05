@@ -1,21 +1,24 @@
-﻿namespace WillyNilly
+﻿namespace WillyNilly.Variables
 {
     /// <summary>
     /// Returns a value from any one of the input variables,
     /// choosing from them with uniform distribution.
     /// </summary>
-    public class OrRandomVariable<T> : IRandomVariable<T>
+    internal sealed class OrVariable<T> : IRandomVariable<T>
     {
+        private readonly IRandomSource _source;
         private readonly IRandomVariable<T>[] _inputs;
 
-        public OrRandomVariable(IRandomVariable<T>[] inputs)
+        public OrVariable(IRandomSource source, IRandomVariable<T>[] inputs)
         {
+            _source = source;
             _inputs = inputs;
         }
 
         public T Measure()
         {
-            var source = _inputs[RandomPool.NextInt(0, _inputs.Length)];
+            var index = _source.NextInt(0, _inputs.Length);
+            var source = _inputs[index];
             return source.Measure();
         }
 
